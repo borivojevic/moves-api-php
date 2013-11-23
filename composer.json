@@ -1,0 +1,31 @@
+{
+    "name": "borivojevic/moves",
+    "type": "library",
+    "description": "PHP wrapper library for Moves API",
+    "keywords": ["moves", "api"],
+    "homepage": "https://github.com/borivojevic/moves-api-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mirko Borivojevic",
+            "email": "mirko@mirkoborivojevic.com",
+            "homepage": "http://mirkoborivojevic.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.1",
+        "guzzle/guzzle": "3.*"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    }
+}
