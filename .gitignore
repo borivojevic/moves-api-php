@@ -1,0 +1,6 @@
+.DS_Store
+
+# Ignore Composer stuff
+.composer/
+vendor/
+composer.lock
