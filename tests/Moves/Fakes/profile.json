@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 23 Nov 2013 15:50:10 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Vary: Accept-Encoding
+X-RateLimit-HourRemaining: 1996
+Etag: W/"f193903772ed9064c20e235b1fcaef12"
+X-RateLimit-HourLimit: 2000
+Content-Encoding: gzip
+X-RateLimit-MinuteRemaining: 59
+X-RateLimit-MinuteLimit: 60
+Content-Length: 130
+
+{"userId":5468213354570535,"profile":{"firstDate":"20131123","currentTimeZone":{"id":"UTC","offset":0},"caloriesAvailable":false}}
