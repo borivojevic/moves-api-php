@@ -22,6 +22,12 @@ class Moves
         return $this->get('user/profile');
     }
 
+    public function dailySummary()
+    {
+        $args = func_get_args();
+        return $this->getRange("user/summary/daily", $args);
+    }
+
     private function get($path, $params = array())
     {
         $client = $this->guzzleClient ?: new GuzzleClient($this->endpoint);
@@ -38,6 +44,35 @@ class Moves
         $response = $request->send();
 
         return $this->handleResponse($response);
+    }
+
+    private function getRange($path, $args)
+    {
+        $format = "Y-m-d";
+
+        if (is_array($args[0])) {
+            list($extra_path, $params) = ["", $args[0]];
+        } elseif ($args[0] instanceof \DateTime) {
+            list($extra_path, $params) = ["/".$args[0]->format($format), @$args[1]];
+        } else {
+            list($extra_path, $params) = ["/{$args[0]}", @$args[1]];
+        }
+        $params = $params ?: [];
+
+        // default to current day
+        if (!$extra_path && (!isset($params["to"]) || !isset($params["from"]))) {
+            $extra_path = "/" . strftime($format);
+        }
+
+        if (isset($params["to"]) && $params["to"] instanceof \DateTime) {
+            $params["to"] = $params["to"]->format($format);
+        }
+
+        if (isset($params["from"]) && $params["from"] instanceof \DateTime) {
+            $params["from"] = $params["from"]->format($format);
+        }
+
+        return $this->get("{$path}{$extra_path}", $params);
     }
 
     private function handleResponse($response)

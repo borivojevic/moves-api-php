@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 26 Nov 2013 19:31:38 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 133
+Connection: keep-alive
+Vary: Accept-Encoding
+X-RateLimit-HourRemaining: 1992
+Etag: W/"60b59e01358179eedb67c5cd3e539d97"
+X-RateLimit-HourLimit: 2000
+Content-Encoding: gzip
+X-RateLimit-MinuteRemaining: 58
+X-RateLimit-MinuteLimit: 60
+
+[{"date":"20131125","summary":[{"activity":"wlk","duration":3378.0,"distance":3618.0,"steps":4657}]},{"date":"20131126","summary":[{"activity":"wlk","duration":3846.0,"distance":4210.0,"steps":4693}]}]
