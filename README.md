@@ -50,3 +50,31 @@ $Moves->dailyActivities(array('from' => '2013-11-10', 'to' => '2013-11-20'));
 
 $Moves->dailyActivities(array('pastDays' => 3)); # past 3 days
 ```
+
+[Daily places](https://dev.moves-app.com/docs/api_places)
+
+```php
+$Moves->dailyPlaces(); # current day
+$Moves->dailyPlaces('2013-11-20'); # any day
+$Moves->dailyPlaces('2013-W48'); # any week
+
+# Date range - max 7 days
+$Moves->dailyPlaces('2013-11-10', '2013-11-20');
+$Moves->dailyPlaces(array('from' => '2013-11-10', 'to' => '2013-11-20'));
+
+$Moves->dailyPlaces(array('pastDays' => 3)); # past 3 days
+```
+
+[Daily storyline](https://dev.moves-app.com/docs/api_storyline)
+
+```php
+$Moves->dailyStoryline(); # current day
+$Moves->dailyStoryline('2013-11-20'); # any day
+$Moves->dailyStoryline('2013-W48'); # any week
+
+# Date range - max 7 days
+$Moves->dailyStoryline('2013-11-10', '2013-11-20');
+$Moves->dailyStoryline(array('from' => '2013-11-10', 'to' => '2013-11-20'));
+
+$Moves->dailyStoryline(array('pastDays' => 3)); # past 3 days
+```
