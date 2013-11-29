@@ -5,7 +5,37 @@ PHP client for [Moves API](https://dev.moves-app.com/).
 
 Inspired by [moves](https://github.com/ankane/moves) Ruby Gem.
 
-## Usage
+### Installation ###
+
+Recommend way to install this package with [Composer](http://getcomposer.org/). Add borivojevic/moves-api-php to your composer.json file.
+
+``` json
+{
+    "require": {
+        "borivojevic/moves": "1.*"
+    }
+}
+```
+
+To install composer run:
+
+```
+curl -s http://getcomposer.org/installer | php
+```
+
+To install composer dependences run:
+
+```
+php composer.phar install
+```
+
+You can autoload all dependencies by adding this to your code:
+
+```
+require 'vendor/autoload.php';
+```
+
+### Usage ###
 
 The main entry point of the library is the Moves\Moves class. API methods require to be signed with valid access token parameter which you have to provide as a first argument of the constructor.
 
@@ -84,3 +114,11 @@ $Moves->dailyStoryline(array('pastDays' => 3)); # past 3 days
 $Moves->dailyStoryline(array('trackPoints' => 'true'));
 $Moves->dailyStoryline('2013-11-10', array('trackPoints' => 'true'));
 ```
+
+### Versioning ###
+
+The library uses [Semantic Versioning](http://semver.org/)
+
+### Copyright and License ###
+
+The library is licensed under the MIT license.
