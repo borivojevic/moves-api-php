@@ -130,7 +130,8 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider getRangeProvider
      */
-    public function testGetRange($args, $expectedPath, $expectedParams) {
+    public function testGetRange($args, $expectedPath, $expectedParams)
+    {
         $partialMock = $this->getMock('\Moves\Moves', array('get'), array('secret'));
         $partialMock->expects($this->once())
             ->method('get')

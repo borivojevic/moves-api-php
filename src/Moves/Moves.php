@@ -56,7 +56,7 @@ class Moves
             list($extra_path, $params) = ["", array('from' => $args[0], 'to' => $args[1])];
         } elseif ($args[0] instanceof \DateTime) {
             list($extra_path, $params) = ["/".$args[0]->format($format), @$args[1]];
-        } elseif($args[0]) {
+        } elseif ($args[0]) {
             list($extra_path, $params) = ["/{$args['0']}", false];
         } else {
             list($extra_path, $params) = ["", false];
