@@ -34,6 +34,12 @@ class Moves
         return $this->getRange("user/activities/daily", $args);
     }
 
+    public function dailyPlaces()
+    {
+        $args = func_get_args();
+        return $this->getRange("user/places/daily", $args);
+    }
+
     public function get($path, $params = array())
     {
         $client = $this->guzzleClient ?: new GuzzleClient($this->endpoint);
