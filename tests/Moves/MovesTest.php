@@ -62,4 +62,79 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(is_array($dailySummary), "Expected daily summary to be an array");
         $this->assertEquals($expected, count($dailySummary), "Expected to return correct number of results");
     }
+
+    public function getRangeProvider()
+    {
+        return array(
+            // Current day
+            array(
+                null,
+                "/" . date("Y-m-d"),
+                array()
+            ),
+            // Single day
+            array(
+                array(new \DateTime('2013-11-20')),
+                "/2013-11-20",
+                array()
+            ),
+            array(
+                array('2013-11-20'),
+                "/2013-11-20",
+                array()
+            ),
+            // Week
+            array(
+                array('2013-W48'),
+                "/2013-W48",
+                array()
+            ),
+            // Month
+            array(
+                array('2013-11'),
+                "/2013-11",
+                array()
+            ),
+            // Date range
+            array(
+                array(array('from' => new \DateTime('2013-11-10'), 'to' => new \DateTime('2013-11-20'))),
+                "",
+                array('from' => '2013-11-10', 'to' => '2013-11-20')
+            ),
+            array(
+                array(array('from' => '2013-11-10', 'to' => '2013-11-20')),
+                "",
+                array('from' => '2013-11-10', 'to' => '2013-11-20')
+            ),
+            array(
+                array(new \DateTime('2013-11-10'), new \DateTime('2013-11-20')),
+                "",
+                array('from' => '2013-11-10', 'to' => '2013-11-20')
+            ),
+            array(
+                array('2013-11-10', '2013-11-20'),
+                "",
+                array('from' => '2013-11-10', 'to' => '2013-11-20')
+            ),
+            // Past days
+            array(
+                array(array('pastDays' => 3)),
+                "",
+                array('pastDays' => '3')
+            )
+        );
+    }
+
+    /**
+     * Test for get range method
+     *
+     * @dataProvider getRangeProvider
+     */
+    public function testGetRange($args, $expectedPath, $expectedParams) {
+        $partialMock = $this->getMock('\Moves\Moves', array('get'), array('secret'));
+        $partialMock->expects($this->once())
+            ->method('get')
+            ->with($expectedPath, $expectedParams);
+        $partialMock->getRange("", $args);
+    }
 }
