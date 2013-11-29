@@ -1,7 +1,9 @@
 moves-api-php
 =============
 
-PHP wrapper library for [Moves API](https://dev.moves-app.com/)
+PHP client for [Moves API](https://dev.moves-app.com/).
+
+Inspired by [moves](https://github.com/ankane/moves) Ruby Gem.
 
 ## Usage
 
