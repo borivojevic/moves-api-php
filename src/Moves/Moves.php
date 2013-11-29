@@ -28,6 +28,12 @@ class Moves
         return $this->getRange("user/summary/daily", $args);
     }
 
+    public function dailyActivities()
+    {
+        $args = func_get_args();
+        return $this->getRange("user/activities/daily", $args);
+    }
+
     public function get($path, $params = array())
     {
         $client = $this->guzzleClient ?: new GuzzleClient($this->endpoint);
@@ -50,7 +56,9 @@ class Moves
     {
         $format = "Y-m-d";
 
-        if (is_array($args[0])) {
+        if (count($args) == 0) {
+            list($extra_path, $params) = ["", false];
+        } elseif (is_array($args[0])) {
             list($extra_path, $params) = ["", $args[0]];
         } elseif (count($args) > 1) {
             list($extra_path, $params) = ["", array('from' => $args[0], 'to' => $args[1])];

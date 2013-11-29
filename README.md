@@ -36,3 +36,17 @@ $Moves->dailySummary(new DateTime('2013-11-20'));
 $Moves->dailySummary(new DateTime('2013-11-10'), new DateTime('2013-11-20'));
 $Moves->dailySummary(array('from' => new DateTime('2013-11-10'), 'to' => new DateTime('2013-11-20')));
 ```
+
+[Daily activities](https://dev.moves-app.com/docs/api_activities)
+
+```php
+$Moves->dailyActivities(); # current day
+$Moves->dailyActivities('2013-11-20'); # any day
+$Moves->dailyActivities('2013-W48'); # any week
+
+# Date range - max 7 days
+$Moves->dailyActivities('2013-11-10', '2013-11-20');
+$Moves->dailyActivities(array('from' => '2013-11-10', 'to' => '2013-11-20'));
+
+$Moves->dailyActivities(array('pastDays' => 3)); # past 3 days
+```
