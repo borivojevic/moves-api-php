@@ -77,4 +77,8 @@ $Moves->dailyStoryline('2013-11-10', '2013-11-20');
 $Moves->dailyStoryline(array('from' => '2013-11-10', 'to' => '2013-11-20'));
 
 $Moves->dailyStoryline(array('pastDays' => 3)); # past 3 days
+
+# Get daily storyline with track points
+$Moves->dailyStoryline(array('trackPoints' => 'true'));
+$Moves->dailyStoryline('2013-11-10', array('trackPoints' => 'true'));
 ```

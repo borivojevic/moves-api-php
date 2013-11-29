@@ -151,6 +151,17 @@ class ClientTest extends \PHPUnit_Framework_TestCase
                 array(array('pastDays' => 3)),
                 "",
                 array('pastDays' => '3')
+            ),
+            // Get daily storyline with track points
+            array(
+                array(array('trackPoints' => 'true')),
+                "/" . date("Y-m-d"),
+                array('trackPoints' => 'true')
+            ),
+            array(
+                array('2013-11-10', array('trackPoints' => 'true')),
+                "/2013-11-10",
+                array('trackPoints' => 'true')
             )
         );
     }

@@ -72,12 +72,12 @@ class Moves
             list($extra_path, $params) = ["", false];
         } elseif (is_array($args[0])) {
             list($extra_path, $params) = ["", $args[0]];
-        } elseif (count($args) > 1) {
+        } elseif (count($args) > 1 && !is_array($args[0]) && !is_array($args[1])) {
             list($extra_path, $params) = ["", array('from' => $args[0], 'to' => $args[1])];
         } elseif ($args[0] instanceof \DateTime) {
             list($extra_path, $params) = ["/".$args[0]->format($format), @$args[1]];
         } elseif ($args[0]) {
-            list($extra_path, $params) = ["/{$args['0']}", false];
+            list($extra_path, $params) = ["/{$args['0']}", @$args[1]];
         } else {
             list($extra_path, $params) = ["", false];
         }
