@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 29 Nov 2013 16:28:23 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 460
+Connection: keep-alive
+Vary: Accept-Encoding
+X-RateLimit-HourRemaining: 1999
+Etag: W/"4748c8defd4cdf819d81c38b701c7455"
+X-RateLimit-HourLimit: 2000
+Content-Encoding: gzip
+X-RateLimit-MinuteRemaining: 59
+X-RateLimit-MinuteLimit: 60
+
+[{"date":"20131129","segments":[{"type":"place","startTime":"20131128T171924Z","endTime":"20131129T051307Z","place":{"id":6849444,"type":"unknown","location":{"lat":43.3071412624,"lon":21.9036485776}},"activities":[{"activity":"wlk","startTime":"20131129T051111Z","endTime":"20131129T051141Z","duration":30.0,"distance":15.0,"steps":30}]},{"type":"move","startTime":"20131129T051307Z","endTime":"20131129T052116Z","activities":[{"activity":"wlk","startTime":"20131129T051307Z","endTime":"20131129T052116Z","duration":489.0,"distance":560.0,"steps":870}]},{"type":"place","startTime":"20131129T052116Z","endTime":"20131129T052336Z","place":{"id":7907484,"type":"unknown","location":{"lat":43.3101125707,"lon":21.9040025391}}},{"type":"move","startTime":"20131129T052336Z","endTime":"20131129T055115Z","activities":[{"activity":"wlk","startTime":"20131129T052336Z","endTime":"20131129T055115Z","duration":1659.0,"distance":1451.0,"steps":1949}]},{"type":"place","startTime":"20131129T055115Z","endTime":"20131129T142818Z","place":{"id":6849444,"type":"unknown","location":{"lat":43.3071412624,"lon":21.9036485776}},"activities":[{"activity":"wlk","startTime":"20131129T055311Z","endTime":"20131129T055511Z","duration":120.0,"distance":70.0,"steps":141},{"activity":"wlk","startTime":"20131129T095817Z","endTime":"20131129T095841Z","duration":24.0,"distance":12.0,"steps":24},{"activity":"wlk","startTime":"20131129T122323Z","endTime":"20131129T122353Z","duration":30.0,"distance":20.0,"steps":40},{"activity":"wlk","startTime":"20131129T142251Z","endTime":"20131129T142351Z","duration":60.0,"distance":45.0,"steps":90}]},{"type":"move","startTime":"20131129T142818Z","endTime":"20131129T145829Z","activities":[{"activity":"wlk","startTime":"20131129T142818Z","endTime":"20131129T145829Z","duration":1811.0,"distance":2771.0,"steps":2309}]},{"type":"place","startTime":"20131129T145829Z","endTime":"20131129T154612Z","place":{"id":6849444,"type":"unknown","location":{"lat":43.3071412624,"lon":21.9036485776}},"activities":[{"activity":"wlk","startTime":"20131129T150151Z","endTime":"20131129T150551Z","duration":240.0,"distance":264.0,"steps":352}]}]}]

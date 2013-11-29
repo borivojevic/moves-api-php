@@ -83,6 +83,16 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(6, count($dailyPlaces), "Expected to return correct number of results");
     }
 
+    public function testDailyStoryline()
+    {
+        $this->plugin->addResponse(__DIR__ . "/Fakes/daily_storyline.json");
+
+        $dailyStoryline = $this->Moves->dailyStoryline();
+
+        $this->assertTrue(is_array($dailyStoryline), "Expected daily storyline to be an array");
+        $this->assertEquals(7, count($dailyStoryline[0]['segments']), "Expected to return correct number of results");
+    }
+
     public function getRangeProvider()
     {
         return array(

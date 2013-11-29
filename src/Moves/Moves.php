@@ -40,6 +40,12 @@ class Moves
         return $this->getRange("user/places/daily", $args);
     }
 
+    public function dailyStoryline()
+    {
+        $args = func_get_args();
+        return $this->getRange("user/storyline/daily", $args);
+    }
+
     public function get($path, $params = array())
     {
         $client = $this->guzzleClient ?: new GuzzleClient($this->endpoint);
