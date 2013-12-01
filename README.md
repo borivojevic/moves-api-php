@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/borivojevic/moves-api-php.png?branch=master)](https://travis-ci.org/borivojevic/moves-api-php)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/borivojevic/moves-api-php/badges/quality-score.png?s=77f00079e962f7c80156a9dc51a09dfd72d34405)](https://scrutinizer-ci.com/g/borivojevic/moves-api-php/)
+[![Code Coverage](https://scrutinizer-ci.com/g/borivojevic/moves-api-php/badges/coverage.png?s=8203a4a99138f78630ce3de7292d7ab489f51529)](https://scrutinizer-ci.com/g/borivojevic/moves-api-php/)
+[![Latest Stable Version](https://poser.pugx.org/borivojevic/rescuetime/v/stable.png)](https://packagist.org/packages/borivojevic/moves)
+
 moves-api-php
 =============
 
