@@ -2,6 +2,13 @@
 
 namespace Moves\PPFormula;
 
+/**
+ * Build API request arguments for calls like:
+ *  - $Moves->dailySummary(array('from' => '2013-11-10', 'to' => '2013-11-20'));
+ *  - $Moves->dailySummary(array('from' => new DateTime('2013-11-10'), 'to' => new DateTime('2013-11-20')));
+ *  - $Moves->dailyActivities(array('pastDays' => 3));
+ *  - $Moves->dailyStoryline(array('trackPoints' => 'true'));
+ */
 class DatePeroidFormula implements PPFormulaInterface
 {
     public function test($arg0, $arg1)

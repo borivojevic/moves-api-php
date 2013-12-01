@@ -2,6 +2,10 @@
 
 namespace Moves\PPFormula;
 
+/**
+ * Build API request arguments for calls like:
+ *  - $Moves->dailyStoryline();
+ */
 class CurrentDayFormula implements PPFormulaInterface
 {
     public function test($arg0, $arg1)

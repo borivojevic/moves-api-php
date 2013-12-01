@@ -2,6 +2,13 @@
 
 namespace Moves\PPFormula;
 
+/**
+ * Build API request arguments for calls like:
+ *  - $Moves->dailyPlaces();
+ *  - $Moves->dailyPlaces('2013-11-20');
+ *  - $Moves->dailyPlaces('2013-W48');
+ *  - $Moves->dailySummary(new DateTime('2013-11-20'));
+ */
 class SingleDayFormula implements PPFormulaInterface
 {
     public function test($arg0, $arg1)

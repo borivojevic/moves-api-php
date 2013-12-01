@@ -2,6 +2,11 @@
 
 namespace Moves\PPFormula;
 
+/**
+ * Build API request arguments for calls like:
+ *  - $Moves->dailySummary('2013-11-10', '2013-11-20');
+ *  - $Moves->dailySummary(new DateTime('2013-11-10'), new DateTime('2013-11-20'));
+ */
 class DateRangeFormula implements PPFormulaInterface
 {
     public function test($arg0, $arg1)
