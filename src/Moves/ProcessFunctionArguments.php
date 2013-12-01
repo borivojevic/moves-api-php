@@ -12,7 +12,6 @@ class ProcessFunctionArguments
         $this->addFormula(new PPFormula\SingleDayFormula());
         $this->addFormula(new PPFormula\DateRangeFormula());
         $this->addFormula(new PPFormula\DatePeroidFormula());
-        $this->addFormula(new PPFormula\RawFormula());
     }
 
     public function process($arg0, $arg1)
