@@ -162,6 +162,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
                 array('2013-11-10', array('trackPoints' => 'true')),
                 "/2013-11-10",
                 array('trackPoints' => 'true')
+            ),
+            array(
+                array(new \DateTime('2013-11-10'), array('trackPoints' => 'true')),
+                "/2013-11-10",
+                array('trackPoints' => 'true')
             )
         );
     }

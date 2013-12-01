@@ -66,35 +66,14 @@ class Moves
 
     public function getRange($path, $args)
     {
-        $format = "Y-m-d";
+        $arg0 = isset($args[0]) ? $args[0] : false;
+        $arg1 = isset($args[1]) ? $args[1] : false;
 
-        if (count($args) == 0) {
-            list($extra_path, $params) = array("", false);
-        } elseif (is_array($args[0])) {
-            list($extra_path, $params) = array("", $args[0]);
-        } elseif (count($args) > 1 && !is_array($args[0]) && !is_array($args[1])) {
-            list($extra_path, $params) = array("", array('from' => $args[0], 'to' => $args[1]));
-        } elseif ($args[0] instanceof \DateTime) {
-            list($extra_path, $params) = array("/".$args[0]->format($format), @$args[1]);
-        } else {
-            list($extra_path, $params) = array("/{$args['0']}", @$args[1]);
-        }
+        $ProcessFunctionArguments = new \Moves\ProcessFunctionArguments();
+        list($extraPath, $params) = $ProcessFunctionArguments->process($arg0, $arg1);
         $params = $params ?: array();
 
-        // default to current day
-        if (!$extra_path && !isset($params["to"]) && !isset($params["from"]) && !isset($params["pastDays"])) {
-            $extra_path = "/" . date($format);
-        }
-
-        if (isset($params["to"]) && $params["to"] instanceof \DateTime) {
-            $params["to"] = $params["to"]->format($format);
-        }
-
-        if (isset($params["from"]) && $params["from"] instanceof \DateTime) {
-            $params["from"] = $params["from"]->format($format);
-        }
-
-        return $this->get("{$path}{$extra_path}", $params);
+        return $this->get("{$path}{$extraPath}", $params);
     }
 
     private function handleResponse($response)
