@@ -79,7 +79,7 @@ class Moves
         } else {
             list($extra_path, $params) = array("/{$args['0']}", @$args[1]);
         }
-        $params = $params ?: [];
+        $params = $params ?: array();
 
         // default to current day
         if (!$extra_path && !isset($params["to"]) && !isset($params["from"]) && !isset($params["pastDays"])) {
