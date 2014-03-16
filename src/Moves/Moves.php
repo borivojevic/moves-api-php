@@ -6,7 +6,7 @@ use Guzzle\Http\Client as GuzzleClient;
 
 class Moves
 {
-    private $endpoint = "https://api.moves-app.com/api/v1/";
+    private $endpoint = "https://api.moves-app.com/api/1.1/";
 
     private $accessToken;
 
