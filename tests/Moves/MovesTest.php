@@ -70,7 +70,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $dailyActivities = $this->Moves->dailyActivities();
 
         $this->assertTrue(is_array($dailyActivities), "Expected daily activities to be an array");
-        $this->assertEquals(6, count($dailyActivities), "Expected to return correct number of results");
+        $this->assertEquals(1, count($dailyActivities), "Expected to return correct number of results");
     }
 
     public function testDailyPlaces()
@@ -80,7 +80,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $dailyPlaces = $this->Moves->dailyPlaces();
 
         $this->assertTrue(is_array($dailyPlaces), "Expected daily places to be an array");
-        $this->assertEquals(6, count($dailyPlaces), "Expected to return correct number of results");
+        $this->assertEquals(1, count($dailyPlaces), "Expected to return correct number of results");
     }
 
     public function testDailyStoryline()
@@ -90,7 +90,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $dailyStoryline = $this->Moves->dailyStoryline();
 
         $this->assertTrue(is_array($dailyStoryline), "Expected daily storyline to be an array");
-        $this->assertEquals(7, count($dailyStoryline[0]['segments']), "Expected to return correct number of results");
+        $this->assertEquals(1, count($dailyStoryline[0]['segments']), "Expected to return correct number of results");
     }
 
     public function getRangeProvider()
