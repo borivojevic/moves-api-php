@@ -1,6 +1,8 @@
 .DS_Store
+authorize.txt
 
 # Ignore Composer stuff
 .composer/
 vendor/
 composer.lock
+bin/
