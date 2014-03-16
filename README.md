@@ -17,7 +17,7 @@ Recommend way to install this package with [Composer](http://getcomposer.org/). 
 ``` json
 {
     "require": {
-        "borivojevic/moves": "1.*"
+        "borivojevic/moves": "1.1.0"
     }
 }
 ```
